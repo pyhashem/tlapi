@@ -5,11 +5,10 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/thedemons/opentele/main/opentele.png" alt="logo" width="180"/>
 <br><br>
-<a href="https://github.com/thedemons/opentele"><img alt="pypi version" src="https://img.shields.io/badge/fork-opentele-blue
-"/></a>
-<a href="https://github.com/hashemdalijeh/"><img alt="pypi version" src="https://img.shields.io/badge/customize-HashemDalijeh-red
-"/></a>
-
+![Static Badge](https://img.shields.io/badge/fork-opentele-blue)
+![Static Badge](https://img.shields.io/badge/customize-HashemDalijeh-red)
+![Static Badge](https://img.shields.io/badge/version-0.0.1-yellow)
+"/>
 
 </p>
 
