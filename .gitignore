@@ -4,7 +4,7 @@ tests.py
 test.py
 __pycache__/
  *.pyc
-opentele.egg-info/*
+tlapi.egg-info/*
 build/*
 pydoc-markdown.yml
 build_script*
