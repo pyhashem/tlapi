@@ -4,18 +4,12 @@
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/thedemons/opentele/main/opentele.png" alt="logo" width="180"/>
-<br><br>
-![Static Badge](https://img.shields.io/badge/fork-opentele-blue)
-![Static Badge](https://img.shields.io/badge/customize-HashemDalijeh-red)
-![Static Badge](https://img.shields.io/badge/version-0.0.1-yellow)
-<<<<<<< HEAD
-=======
-"/>
->>>>>>> cfca5219d6b6909f65ccc284022ad1d9b4111fc5
-
 </p>
 
 <br>
+![Static Badge](https://img.shields.io/badge/fork-opentele-blue)
+![Static Badge](https://img.shields.io/badge/customize-HashemDalijeh-red)
+![Static Badge](https://img.shields.io/badge/version-0.0.1-yellow)
 
 A **Python Telegram API Library** for converting between **tdata** and **telethon** sessions, with built-in **official Telegram APIs**. [**Read the documentation**](https://opentele.readthedocs.io/en/latest/documentation/telegram-desktop/tdesktop/).
 
