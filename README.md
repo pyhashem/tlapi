@@ -1,12 +1,5 @@
-<!-- vim: syntax=Markdown -->
-
 # TLAPI
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/thedemons/opentele/main/opentele.png" alt="logo" width="180"/>
-</p>
-
-<br>
 ![Static Badge](https://img.shields.io/badge/fork-opentele-blue)
 ![Static Badge](https://img.shields.io/badge/customize-HashemDalijeh-red)
 ![Static Badge](https://img.shields.io/badge/version-0.0.1-yellow)
