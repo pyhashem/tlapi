@@ -8,6 +8,10 @@
 ![Static Badge](https://img.shields.io/badge/fork-opentele-blue)
 ![Static Badge](https://img.shields.io/badge/customize-HashemDalijeh-red)
 ![Static Badge](https://img.shields.io/badge/version-0.0.1-yellow)
+<<<<<<< HEAD
+=======
+"/>
+>>>>>>> cfca5219d6b6909f65ccc284022ad1d9b4111fc5
 
 </p>
 
