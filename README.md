@@ -7,6 +7,8 @@
 A **Python Telegram API Library** for converting between **tdata** and **telethon** sessions, with built-in **official Telegram APIs**. [**Read the documentation**](https://opentele.readthedocs.io/en/latest/documentation/telegram-desktop/tdesktop/).
 
 ## Features
+- **[tlapi]** - add random app version
+- **[tlapi]** - add new Api ID - Api Hash
 - **[opentele]** - Convert [Telegram Desktop](https://github.com/telegramdesktop/tdesktop) **tdata** sessions to [telethon](https://github.com/LonamiWebs/Telethon) sessions and vice versa.
 - **[opentele]** - Use **telethon** with [official APIs](#authorization) to avoid bot detection.
 - **[opentele]** - Randomize [device info](https://opentele.readthedocs.io/en/latest/documentation/authorization/api/#generate) using real data that recognized by Telegram server.
