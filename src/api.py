@@ -271,8 +271,14 @@ class APIData(object, metaclass=BaseAPIMetaClass):
             client.start()
         ```
         """
-        if cls == API.TelegramAndroid or cls == API.TelegramAndroidX:
+        if cls == API.TelegramAndroid:
             deviceInfo = AndroidDevice.RandomDevice(unique_id)
+
+        elif cls == API.TelegramAndroidX:
+            deviceInfo = AndroidDeviceX.RandomDevice(unique_id)
+        
+        elif cls == API.TelegramAndroidBeta:
+            deviceInfo = AndroidDeviceBeta.RandomDevice(unique_id)
 
         elif cls == API.TelegramIOS:
             deviceInfo = iOSDeivce.RandomDevice(unique_id)
@@ -286,7 +292,7 @@ class APIData(object, metaclass=BaseAPIMetaClass):
                 f"{cls.__name__} device not supported for randomize yet"
             )
 
-        return cls(device_model=deviceInfo.model, system_version=deviceInfo.version)
+        return cls(device_model=deviceInfo.model, system_version=deviceInfo.version, app_version=deviceInfo.app_version)
 
     @classmethod
     def findData(cls: Type[_T], pid: int) -> Optional[_T]:
@@ -354,7 +360,7 @@ class API(BaseObject):
         api_hash = "b18441a1ff607e10a989891a5462e627"
         device_model = "Desktop"
         system_version = "Windows 10"
-        app_version = "3.4.3 x64"
+        app_version = "4.12.2 x64"
         lang_code = "en"
         system_lang_code = "en-US"
         lang_pack = "tdesktop"
@@ -437,7 +443,7 @@ class API(BaseObject):
             else:
                 deviceInfo = LinuxDevice.RandomDevice(unique_id)
 
-            return cls(device_model=deviceInfo.model, system_version=deviceInfo.version)
+            return cls(device_model=deviceInfo.model, system_version=deviceInfo.version, app_version=deviceInfo.app_version)
 
     class TelegramAndroid(APIData):
         """
@@ -449,7 +455,7 @@ class API(BaseObject):
             api_hash (`str`)         : `"eb06d4abfb49dc3eeb1aeb98ae0f581e"`
             device_model (`str`)     : `"Samsung SM-G998B"`
             system_version (`str`)   : `"SDK 31"`
-            app_version (`str`)      : `"8.4.1 (2522)"`
+            app_version (`str`)      : `"10.2.8 (40851)"`
             lang_code (`str`)        : `"en"`
             system_lang_code (`str`) : `"en-US"`
             lang_pack (`str`)        : `"android"`
@@ -459,7 +465,31 @@ class API(BaseObject):
         api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
         device_model = "Samsung SM-G998B"
         system_version = "SDK 31"
-        app_version = "8.4.1 (2522)"
+        app_version = "10.2.8 (40851)"
+        lang_code = "en"
+        system_lang_code = "en-US"
+        lang_pack = "android"
+
+    class TelegramAndroidBeta(APIData):
+        """
+        Official Telegram Beta for Android
+
+        ### Attributes:
+            api_id (`int`)           : `4`
+            api_hash (`str`)         : `"014b35b6184100b085b0d0572f9b5103"`
+            device_model (`str`)     : `"Samsung SM-G998B"`
+            system_version (`str`)   : `"SDK 31"`
+            app_version (`str`)      : `"10.3.2"`
+            lang_code (`str`)        : `"en"`
+            system_lang_code (`str`) : `"en-US"`
+            lang_pack (`str`)        : `"android"`
+        """
+
+        api_id = 4
+        api_hash = "014b35b6184100b085b0d0572f9b5103"
+        device_model = "Samsung SM-G998B"
+        system_version = "SDK 31"
+        app_version = "10.3.2"
         lang_code = "en"
         system_lang_code = "en-US"
         lang_pack = "android"
@@ -474,7 +504,7 @@ class API(BaseObject):
             api_hash (`str`)         : `"3e0cb5efcd52300aec5994fdfc5bdc16"`
             device_model (`str`)     : `"Samsung SM-G998B"`
             system_version (`str`)   : `"SDK 31"`
-            app_version (`str`)      : `"8.4.1 (2522)"`
+            app_version (`str`)      : `"0.26.3.1668-arm64-v8a"`
             lang_code (`str`)        : `"en"`
             system_lang_code (`str`) : `"en-US"`
             lang_pack (`str`)        : `"android"`
@@ -484,7 +514,7 @@ class API(BaseObject):
         api_hash = "3e0cb5efcd52300aec5994fdfc5bdc16"
         device_model = "Samsung SM-G998B"
         system_version = "SDK 31"
-        app_version = "8.4.1 (2522)"
+        app_version = "0.26.3.1668-arm64-v8a"
         lang_code = "en"
         system_lang_code = "en-US"
         lang_pack = "android"
@@ -499,7 +529,7 @@ class API(BaseObject):
             api_hash (`str`)         : `"33c45224029d59cb3ad0c16134215aeb"`
             device_model (`str`)     : `"iPhone 13 Pro Max"`
             system_version (`str`)   : `"14.8.1"`
-            app_version (`str`)      : `"8.4"`
+            app_version (`str`)      : `"10.3.1 (27850)"`
             lang_code (`str`)        : `"en"`
             system_lang_code (`str`) : `"en-US"`
             lang_pack (`str`)        : `"ios"`
@@ -511,7 +541,7 @@ class API(BaseObject):
         api_hash = "33c45224029d59cb3ad0c16134215aeb"
         device_model = "iPhone 13 Pro Max"
         system_version = "14.8.1"
-        app_version = "8.4"
+        app_version = "10.3.1 (27850)"
         lang_code = "en"
         system_lang_code = "en-US"
         lang_pack = "ios"
@@ -526,7 +556,7 @@ class API(BaseObject):
             api_hash (`str`)         : `"68875f756c9b437a8b916ca3de215815"`
             device_model (`str`)     : `"MacBook Pro"`
             system_version (`str`)   : `"macOS 12.0.1"`
-            app_version (`str`)      : `"8.4"`
+            app_version (`str`)      : `"10.3 (build 256373)"`
             lang_code (`str`)        : `"en"`
             system_lang_code (`str`) : `"en-US"`
             lang_pack (`str`)        : `"macos"`
@@ -538,7 +568,7 @@ class API(BaseObject):
         # api_hash = "3975f648bb682ee889f35483bc618d1c" | Telegram for macOS uses this api, but it"s unofficial api, why?
         device_model = "MacBook Pro"
         system_version = "macOS 12.0.1"
-        app_version = "8.4"
+        app_version = "10.3 (build 256373)"
         lang_code = "en"
         system_lang_code = "en-US"
         lang_pack = "macos"
